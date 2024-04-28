@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITmation</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div id="header" >
+        <h1 id="title" class="orbitron">VITmation</h1>
+    </div>
+    <div class="question" id="instruction">
+        <p>Move the circle from the gate to AB1</p>
+    </div>
+
+</div>
+    <div class="container">
+        <div class="left">
+            <label>HTML</label>
+            <textarea id="html-code" data-question="0" onkeyup="run()">
+<div class='main'>
+    <div class='circle'></div>
+</div></textarea>
+
+            <label>CSS</label>
+            <textarea id="css-code" data-question="0" onkeyup="run()">
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation: move 5s;
+    bottom:0px;
+}
+
+@keyframes move {
+ 
+}</textarea>
+<div>
+    <button class="btn" id="prev" style="margin-left:30px;">Prev</button>
+    <div class="dropdown">
+        <button id="level-display" class="dropbtn">Dropdown</button>
+        <!-- <div class="dropdown-content">
+          <a href="#">Question 1</a>
+          <a href="#">Question 2</a>
+          <a href="#">Question 3</a>
+        </div> -->
+      </div>
+    <button class="btn" id="next">Next</button>
+</div>
+
+        </div>
+
+        <div class="right">
+            <iframe id="output" class="output-container"></iframe>
+            <!-- <button class="btn" id="hint" onclick="hint()">Hint</button> -->
+            <button class="btn" id="viewAnswer" onclick="viewAnswer()">View Answer</button>
+            <!-- <span id="powered-by">Powered By BS Dhevdharsan, Prisha Sri J, Saranya Sarathy. Faculty Mentors : Dr.Sandhya P, Dr. Rama Parvathy L</span> -->
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        // Function to run when HTML or CSS code is changed
+        function run(){
+            let htmlCode = document.getElementById('html-code');
+            let cssCode = document.getElementById('css-code');
+            let output = document.getElementById('output');
+
+            output.contentDocument.body.innerHTML = htmlCode.value + "<style>" + cssCode.value + "</style>";
+        }
+
+        // Initialize the editor with the first question
+        run();
+
+        // Game object
+    </script>
+    <script src="./levels.js"></script>
+    <script src="./game.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Close the modal when the user clicks on the close button (×)
+            document.getElementsByClassName("close")[0].onclick = function() {
+                document.getElementById("myModal").style.display = "none";
+            };
+
+            // Close the modal when the user clicks anywhere outside of it
+            window.onclick = function(event) {
+                if (event.target == document.getElementById("myModal")) {
+                    document.getElementById("myModal").style.display = "none";
+                }
+            };
+
+            // Initialize the game
+            game.start();
+        });
+    </script>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        
+        <h2 style="text-align: center;background-color:teal; color:white; font-weight:50; margin-bottom: 10px;padding: 5px;" > Correct Code </h2>
+        <span class="close">&times;</span>
+
+        <pre><code id="correctCode"></code></pre>
+        <button id="copy" class="btn" onclick="copy()" style="margin-left: 0px;">Copy Code</button>
+        </div>
+    </div>
+  <!-- End of Modal HTML -->
+  
+</body>
+</html>

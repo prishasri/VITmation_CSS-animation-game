@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: #071207;
+    font-weight: 700;
+    background-color: #9aac92ec;
+}
+
+.container {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+}
+
+.left, .right {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.right {
+    
+    height: 100%;
+}
+
+textarea {
+    width: 100%;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+}
+
+#html-code {
+    height: 17%; 
+}
+
+#css-code {
+    height: 71%; 
+}
+
+
+.output-container {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.output {
+    flex: 1;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+    padding: 10px 20px;
+    background-color:teal;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+  
+.dropbtn {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+textarea{
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 10px 20px;
+    border:0;
+    outline:0;
+    font-size: 18px;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    border: 0;
+    outline: 0;
+}
+
+label i{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+label{
+    display:flex;
+    align-items: center;
+    background-color: black;
+    height: 30px;
+    padding-left: 5px;
+    color: white;
+}
+
+.question{
+    margin-left: 30px;
+    margin-top: 30px;
+    display: inline;
+    font-size: larger;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+/* CSS */
+.output-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+    background-image: url(./map.png);
+    background-size: cover; 
+    background-position: center; 
+    pointer-events: none; 
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    bottom: calc(100% + 2px); 
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+#title{
+    margin:20px;
+    margin-left: 30px;
+    padding-top: 10px;
+    color: red;
+    font-size: 3rem;
+    color: rgb(2, 39, 1);
+    text-shadow: 2px 2px 8px rgb(20, 244, 244), -2px -2px 8px orange;
+  }
+  /* Modal styles */
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:visible;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: rgb(192, 224, 201);
+    margin: auto auto; 
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 50%;
+    height: 530px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.header{
+    display: flex;
+}
+
+#powered-by{
+    font-style: italic;
+    color: #888;
+    font-size: x-small;
+}
+
+.footer {
+    /* background-color: #f8f9fa; */
+    /* padding: 10px 20px; */
+    text-align: center;
+    /* border-top: 1px solid #ddd; */
+}
